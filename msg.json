@@ -1,0 +1,1 @@
+{\" "start\:\皮皮监控启动\,\stop\:\皮皮监控停止\,\port\:\监控端口\,\interval\:\检查间隔\,\healthCheck\:\执行健康检查\,\apiOk\:\API正常\,\apiFail\:\API异常\,\processAlive\:\进程存活\,\processDead\:\进程未运行\,\restarting\:\正在重启Gateway\,\restartSent\:\重启命令已发送\} 

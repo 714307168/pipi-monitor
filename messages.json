@@ -1,0 +1,19 @@
+{
+  "start": "皮皮监控启动",
+  "stop": "皮皮监控停止",
+  "port": "监控端口",
+  "interval": "检查间隔",
+  "healthCheck": "执行健康检查...",
+  "apiOk": "API 状态: 正常",
+  "apiFail": "API 状态: 异常",
+  "processAlive": "进程状态: 存活",
+  "processDead": "进程状态: 未运行",
+  "restarting": "正在重启 OpenClaw Gateway...",
+  "restartSent": "Gateway 重启命令已发送",
+  "restartCooldown": "重启冷却期内，跳过",
+  "restartMaxRetry": "重启次数超限，需要人工干预",
+  "configChanged": "检测到配置变更",
+  "logIssue": "日志分析发现问题",
+  "noLogFile": "未找到日志文件",
+  "foundErrors": "发现错误"
+}

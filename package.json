@@ -1,0 +1,27 @@
+{
+  "name": "pipi-monitor",
+  "version": "1.0.0",
+  "description": "皮皮健康监控工具 - OpenClaw Gateway 监控",
+  "main": "src/index.js",
+  "bin": {
+    "pimonitor": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js --dev",
+    "build": "pkg . --targets node18-win-x64 --output dist/pimonitor.exe"
+  },
+  "pkg": {
+    "assets": ["config/**/*", "messages.json"],
+    "outputPath": "dist"
+  },
+  "dependencies": {
+    "ws": "^8.14.2",
+    "chokidar": "^3.5.3",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
