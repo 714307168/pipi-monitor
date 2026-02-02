@@ -41,6 +41,9 @@ class LogAnalyzer {
   }
 
   analyze() {
+    // 每次分析前重置计数器，避免累积
+    this.errorCounts = {};
+    
     const logFile = this.getLatestLogFile();
     if (!logFile) {
       logger.warn(MSG.noLogFile);
