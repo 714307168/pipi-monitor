@@ -41,7 +41,8 @@ const CONFIG = {
       { pattern: /Invalid bearer token/i, type: '401_AUTH_ERROR' },
       { pattern: /EADDRINUSE/i, type: 'PORT_CONFLICT' },
       { pattern: /ECONNREFUSED/i, type: 'CONNECTION_REFUSED' },
-      { pattern: /process exited/i, type: 'PROCESS_CRASH' },
+      // 只匹配非零退出码的进程崩溃
+      { pattern: /process exited with code [1-9]/i, type: 'PROCESS_CRASH' },
       { pattern: /restart loop/i, type: 'RESTART_LOOP' },
     ]
   },
