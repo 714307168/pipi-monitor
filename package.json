@@ -1,6 +1,6 @@
 {
   "name": "pipi-monitor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "皮皮健康监控工具 - OpenClaw Gateway 监控",
   "main": "src/index.js",
   "bin": {
