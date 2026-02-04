@@ -4,15 +4,22 @@
 const fs = require('fs');
 const path = require('path');
 
-// 硬编码用户目录（服务以 SYSTEM 运行时 USERPROFILE 不正确）
-const userHome = 'C:\\Users\\Administrator';
-
 const CONFIG = {
   // OpenClaw 配置路径
-  openclawConfig: path.join(userHome, '.openclaw', 'openclaw.json'),
+  openclawConfig: 'E:\\openclaw\\.openclaw\\openclaw.json',
   
   // 日志路径
-  sessionsDir: path.join(userHome, '.openclaw', 'agents', 'main', 'sessions'),
+  sessionsDir: 'E:\\openclaw\\.openclaw\\agents\\main\\sessions',
+  
+  // OpenClaw 日志路径（Windows 备用路径）
+  openclawLogDir: 'E:\\openclaw\\.openclaw\\logs',
+  
+  // 消息响应超时检测配置
+  responseTimeout: {
+    enabled: true,
+    timeoutMs: 15 * 60 * 1000,  // 15分钟无响应超时
+    checkIntervalMs: 60000,     // 每分钟检查一次
+  },
   
   // 皮皮日志目录
   logsDir: 'E:\\pipi\\logs',
@@ -21,7 +28,9 @@ const CONFIG = {
   gateway: {
     host: 'localhost',
     port: 18789,
-    checkInterval: 30000,  // 30秒检查一次
+    checkInterval: 60000,  // 60秒检查一次
+    stuckThreshold: 180000,  // 3分钟无活动视为卡住
+    stuckCountBeforeRestart: 2,  // 连续2次检测到卡住才重启
   },
   
   // NSSM 路径
